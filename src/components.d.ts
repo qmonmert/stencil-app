@@ -54,6 +54,9 @@ declare global {
   namespace JSXElements {
       export interface MyModalAttributes extends HTMLAttributes {
         
+          open?: any,
+          title?: any,
+          content?: any
       }
   }
 }

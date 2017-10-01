@@ -16,8 +16,22 @@
 </head>
 <body>
 
-  <my-backdrop></my-backdrop>
-  <my-modal></my-modal>
+  <button>Open Modal</button>
+
+  <!-- <my-backdrop></my-backdrop> -->
+  <my-modal
+    title="Info"
+    content="This is an important information !">
+  </my-modal>
+
+  <script>
+    var btn = document.querySelector('button');
+    var modal = document.querySelector('my-modal');
+    btn.addEventListener('click', function() {
+      // modal.style.display = 'block';
+      modal.open();
+    });
+  </script>
 
 </body>
 </html>
