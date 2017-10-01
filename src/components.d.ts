@@ -31,6 +31,36 @@ declare global {
   }
 }
 
+import { MyModalBundle as MyModalBundle } from './components/my-modal-bundle/my-modal-bundle';
+
+interface HTMLMyModalBundleElement extends MyModalBundle, HTMLElement {
+}
+declare var HTMLMyModalBundleElement: {
+  prototype: HTMLMyModalBundleElement;
+  new (): HTMLMyModalBundleElement;
+};
+declare global {
+  interface HTMLElementTagNameMap {
+      "my-modal-bundle": HTMLMyModalBundleElement;
+  }
+  interface ElementTagNameMap {
+      "my-modal-bundle": HTMLMyModalBundleElement;
+  }
+  namespace JSX {
+      interface IntrinsicElements {
+          "my-modal-bundle": JSXElements.MyModalBundleAttributes;
+      }
+  }
+  namespace JSXElements {
+      export interface MyModalBundleAttributes extends HTMLAttributes {
+        
+          open?: any,
+          title?: any,
+          content?: any
+      }
+  }
+}
+
 import { MyModal as MyModal } from './components/my-modal/my-modal';
 
 interface HTMLMyModalElement extends MyModal, HTMLElement {
@@ -54,7 +84,6 @@ declare global {
   namespace JSXElements {
       export interface MyModalAttributes extends HTMLAttributes {
         
-          open?: any,
           title?: any,
           content?: any
       }

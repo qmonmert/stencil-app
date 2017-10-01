@@ -1,6 +1,5 @@
 import { Component } from '@stencil/core';
 
-
 @Component({
   tag: 'my-backdrop',
   styleUrl: 'my-backdrop.scss'

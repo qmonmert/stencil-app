@@ -18,15 +18,14 @@
 
   <button>Open Modal</button>
 
-  <!-- <my-backdrop></my-backdrop> -->
-  <my-modal
+  <my-modal-bundle
     title="Info"
     content="This is an important information !">
-  </my-modal>
+  </my-modal-bundle>
 
   <script>
     var btn = document.querySelector('button');
-    var modal = document.querySelector('my-modal');
+    var modal = document.querySelector('my-modal-bundle');
     btn.addEventListener('click', function() {
       // modal.style.display = 'block';
       modal.open();
