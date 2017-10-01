@@ -4,7 +4,59 @@
  * and imports for stencil collections that might be configured in your stencil.config.js file
  */
 
-import '@stencil/router';
+import { MyBackdrop as MyBackdrop } from './components/my-backdrop/my-backdrop';
+
+interface HTMLMyBackdropElement extends MyBackdrop, HTMLElement {
+}
+declare var HTMLMyBackdropElement: {
+  prototype: HTMLMyBackdropElement;
+  new (): HTMLMyBackdropElement;
+};
+declare global {
+  interface HTMLElementTagNameMap {
+      "my-backdrop": HTMLMyBackdropElement;
+  }
+  interface ElementTagNameMap {
+      "my-backdrop": HTMLMyBackdropElement;
+  }
+  namespace JSX {
+      interface IntrinsicElements {
+          "my-backdrop": JSXElements.MyBackdropAttributes;
+      }
+  }
+  namespace JSXElements {
+      export interface MyBackdropAttributes extends HTMLAttributes {
+        
+      }
+  }
+}
+
+import { MyModal as MyModal } from './components/my-modal/my-modal';
+
+interface HTMLMyModalElement extends MyModal, HTMLElement {
+}
+declare var HTMLMyModalElement: {
+  prototype: HTMLMyModalElement;
+  new (): HTMLMyModalElement;
+};
+declare global {
+  interface HTMLElementTagNameMap {
+      "my-modal": HTMLMyModalElement;
+  }
+  interface ElementTagNameMap {
+      "my-modal": HTMLMyModalElement;
+  }
+  namespace JSX {
+      interface IntrinsicElements {
+          "my-modal": JSXElements.MyModalAttributes;
+      }
+  }
+  namespace JSXElements {
+      export interface MyModalAttributes extends HTMLAttributes {
+        
+      }
+  }
+}
 
 import { MyName as MyName } from './components/my-name/my-name';
 
